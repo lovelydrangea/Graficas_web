@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shooter</title>
+</head>
+<body>
+    <div id="menu" class="screen active">
+  <h1 class="title">SLIME OUT</h1>
+  <div class="card">
+    <button onclick="showScreen('game')">Jugar</button>
+    <button onclick="showScreen('config')">Configuración</button>
+    <button onclick="showScreen('score')">Puntuación</button>
+  </div>
+</div>
+
+<div id="config" class="screen">
+  <h1 class="title">Configuración</h1>
+  <div class="card">
+    <label>Volumen
+      <input type="range">
+    </label>
+    <button onclick="showScreen('menu')">Volver</button>
+  </div>
+</div>
+
+<div id="score" class="screen">
+  <h1 class="title">Puntuación</h1>
+  <div class="card">
+    <p>Máximo: 0000</p>
+    <button onclick="showScreen('menu')">Volver</button>
+  </div>
+</div>
+
+<div id="game" class="screen">
+  <h1 class="title small">Slime Out</h1>
+  <canvas id="canvas" width="800" height="450"></canvas>
+  <button class="pauseBtn" onclick="pauseGame()">Pausa</button>
+</div>
+
+<div id="pause" class="screen">
+  <h1 class="slimeTitle">PAUSA</h1>
+  <div class="card">
+    <button onclick="resumeGame()">Continuar</button>
+    <button onclick="showScreen('menu')">Salir</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
