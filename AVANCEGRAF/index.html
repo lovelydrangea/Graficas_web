@@ -7,6 +7,13 @@
     <title>Shooter</title>
 </head>
 <body>
+
+  <audio autoplay loop src="charli.mp3">
+
+Your browser does not support the audio element.
+</audio>
+
+
     <div id="menu" class="screen active">
   <h1 class="title">SLIME OUT</h1>
   <div class="card">
@@ -16,14 +23,27 @@
   </div>
 </div>
 
+<form>
 <div id="config" class="screen">
   <h1 class="title">Configuración</h1>
   <div class="card">
-    <label>Volumen
+    <label>Efectos de Sonido
       <input type="range">
     </label>
-    <button onclick="showScreen('menu')">Volver</button>
+  </div>    
+  <div class="card">
+    <label>Musica
+      <input type="range">
+    </label>
+  </div>      
+  <div class="card">
+    <label>Pantalla completa
+      <input type="checkbox">
+    </label>
   </div>
+</form>    
+  <button onclick="showScreen('menu')">Volver</button>
+
 </div>
 
 <div id="score" class="screen">
